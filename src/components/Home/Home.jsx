@@ -8,7 +8,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(()=> {
-        axios.get('http://localhost:3001/contacts')
+        axios.get('http://localhost:3001/users')
         .then(res => setData(res.data))
         .catch(err => console.log(err))
     }, []);
@@ -16,7 +16,7 @@ const Home = () => {
     const handleDelete = (id) => {
         const confirm = window.confirm("Do you like to Delete?");
         if(confirm) {
-            axios.delete('http://localhost:3001/contacts'+id)
+            axios.delete('http://localhost:3001/users'+id)
             .then(res => {
                 console.log(res.data);
                 navigate('/');
