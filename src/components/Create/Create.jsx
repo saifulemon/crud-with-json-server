@@ -7,6 +7,7 @@ const Create = () => {
   const [inputData, setInputData] = useState({
     name: "",
     email: "",
+    username: ""
   });
 
   const navigate = useNavigate();
@@ -25,6 +26,17 @@ const Create = () => {
     <div className="d-flex w-100 vh-100 justify-content-center align-items-center">
       <div className="w-50 border bg-secondary text-white p-5">
         <form onSubmit={handleSubmit}>
+        <div>
+            <label htmlFor="username">username:</label>
+            <input
+              type="text"
+              name="username"
+              className="form-control"
+              onChange={(e) =>
+                setInputData({ ...inputData, username: e.target.value })
+              }
+            />
+          </div>
           <div>
             <label htmlFor="name">Name:</label>
             <input
