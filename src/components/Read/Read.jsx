@@ -21,7 +21,7 @@ const Read = () => {
         <h5>Name: {data.name}</h5>
         <h5>Email: {data.email}</h5>
         <Link to="/" className="btn btn-info me-3">Back</Link>
-        <Link to="/update/:id" className="btn btn-outline-success ">Edit</Link>
+        <Link to={`/update/${id}`} className="btn btn-outline-success ">Edit</Link>
       </div>
     </div>
   );
